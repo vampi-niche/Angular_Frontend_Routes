@@ -1,0 +1,46 @@
+<div style="height: 100vh" class="whole-con">
+  <img
+    src="https://res.cloudinary.com/dwo8ep45k/image/upload/v1572835604/2598566_oek6ez.jpg"
+    class="right-form"
+  />
+  <div class="whole_con">
+    <button mat-raised-button color="default" (click)="goToAdmin()">
+      GO TO ADMIN MODE
+    </button>
+    <div class="login_con">
+      <h4>Login</h4>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Email"
+          type="text"
+          [formControl]="email"
+          class="form-control"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          [formControl]="password"
+          class="form-control"
+          required
+        />
+      </mat-form-field>
+      <p *ngIf="error">
+        {{ error }}
+      </p>
+      <button mat-raised-button (click)="login()" color="primary">
+        Login
+      </button>
+    </div>
+    <div class="signup_con">
+      <p>Don't have an account yet ? create an account</p>
+      <button mat-raised-button color="success" (click)="signUp()">
+        SIGNUP
+      </button>
+    </div>
+  </div>
+</div>
